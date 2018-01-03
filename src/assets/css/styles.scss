@@ -1,0 +1,114 @@
+@import "vendor/initial";
+
+@import "vendor/easing";
+
+body{
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "helv";
+  src: url('../font/helvetica.woff') format('woff');
+}
+
+.helv{
+  font-family: "helv";
+}
+
+.wrapper{
+  position: fixed;
+  width: 100%;
+  canvas{
+    vertical-align: bottom;
+  }
+}
+
+.text{
+  &.isHidden{
+    visibility: hidden;
+  }
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // background: rgba(#fff, 0.3);
+  // opacity: 0;
+
+
+  &_wrap{
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+
+    .no-pc &{
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+
+  h1{
+    margin-bottom: 2em;
+
+    .no-pc &{
+      margin-bottom: 1.4em;
+    }
+    img{
+      width: 333px;
+      height: 78px;
+
+      .no-pc &{
+        width: 333*0.8px;
+        height: 78*0.8px;
+      }
+    }
+  }
+  
+  p, a{
+    line-height: 1.5;
+    font-family: "helv";
+  }
+
+  .links{
+    padding-top: 0.5em;
+  }
+
+  a{
+    position: relative;
+    display: inline-block;
+    
+    text-decoration: none;
+    &.link{
+      padding: 8px 13px 4px;
+      // background: rgba(#fff, 0.4);
+      margin-right: 5px;
+      border: 1px solid #3e3e3e;
+      font-size: 14px;
+      vertical-align: middle; 
+      letter-spacing: 0.1em;
+      color: #3e3e3e;
+      margin-bottom: 10px;
+
+      .no-pc &{
+        padding: 8px 13px 6px;
+        font-size: 10px;
+      }
+    }
+  }
+
+  p{
+    margin-bottom: 1.5em;
+    color: #3e3e3e;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+
+    .no-pc &{
+      font-size: 11px;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

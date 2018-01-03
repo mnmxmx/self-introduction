@@ -1,0 +1,59 @@
+$breakpoint-tablet: 1280px;
+$breakpoint-mobile: 680px;
+$breakpoint-mobile-ex: 681px;
+
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin screen($break-point-min, $break-point-max) {
+  @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  content: "";
+  clear: both;
+  height: 0;
+  display: block;
+  visibility: hidden;
+}
+
+.clearfix:after {
+  @include clearfix();
+}
+
+@mixin disable-link {
+  cursor: default;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+@mixin hide-text($textIndent: 101%) {
+  overflow: hidden;
+  text-indent: $textIndent;
+  white-space: nowrap;
+}
+
+@function pt-to-px($pt) {
+  @return round($pt*1.33);
+}
+
+@function calc-tracking($t) {
+  @return $t/1000;
+}
+
+@function calc-kerning($t, $k) {
+  @return ($t+$k)/1000;
+}
+
+$green: #1ba40c;
