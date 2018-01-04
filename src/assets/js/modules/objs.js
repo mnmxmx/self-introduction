@@ -3,7 +3,7 @@ import Simulation from "./simulation";
 export default class Objs{
   constructor(webgl){
     this.webgl = webgl;
-    this.size = 22;
+    this.size = 26;
     this.objNum = this.size * this.size;
     this.objTypeNum = 3;
     this.objNum_2 = Math.floor(this.objNum / this.objTypeNum);
