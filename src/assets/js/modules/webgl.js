@@ -1,10 +1,5 @@
 import Loading from "./loading";
 import Objs from "./objs";
-import Mask from "./mask";
-
-import Audio from "./audio";
-
-
 
 export default class Webgl{
   constructor(){
